@@ -1,4 +1,4 @@
-# my_components
+# 自己写的一些vue小组件
 
 > A Vue.js project
 
