@@ -19,3 +19,12 @@ npm run build --report
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+
+src/components/countDown-->短信倒计时组件
+src/components/snake-->loading组件1
+src/components/double-bounce-->loading组件2
+src/components/vTable.vue-->表格组件
+src/components/vTable.js-->表格组件(render函数版)
+
