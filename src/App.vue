@@ -6,14 +6,14 @@
         </div>
         <router-view v-if="$route.name === 'countDown'" :start='start' :seconds="50" @countDown='start=false' @click.native='sendCode'></router-view>
         <router-view v-if="$route.name === 'spinner'"></router-view>
-        <router-view v-if="$route.name === 'spinner'" type="doubleBounce" color="blue" :size="0.8"></router-view>
+        <router-view v-if="$route.name === 'spinner'" type="doubleBounce" color="black" :size="0.6"></router-view>
         <!-- <router-view v-if="$route.name === 'vTable'" :tableData="tableData" :columns="columns"></router-view> -->
-        <vTable :tableData="tableData" :columns="columns"></vTable>
+        <vTable :tableData="tableData" :columns="columns" @tdClick="tdClick" @thClick="thClick"></vTable>
     </div>
 </template>
 <script>
-import { loginList } from './tableData.json'
-let { data } = loginList;
+import { data } from './tableData.json'
+
 import vTable from '@/components/vTable.vue'
 
 export default {
@@ -31,20 +31,30 @@ export default {
             seconds: 50,
             columns: [
                 {
-                    value: 'logTime',
+                    value: 'cTime',
                     label: '登陆时间'
                 }, {
-                    value: 'userName',
+                    value: 'nick',
                     label: '用户名'
-                }, {
-                    value: 'operTime',
-                    label: '操作时长',
-                    formatter (value) {
-                        return (value / 60).toFixed(2) + 'min'
-                    }
                 }, {
                     value: 'userID',
                     label: '用户ID'
+                },{
+                    value: 'company.name',
+                    label: '公司',
+                    formatter: function (value) {
+                        return value && value + '123'
+                    },
+                    width: '500'
+                },{
+                    value: 'start',
+                    label: '状态'
+                },{
+                    value: 'operTime',
+                    label: 'operTime'
+                },{
+                    value: 'operNum',
+                    label: 'operTime'
                 }
             ]
         }
@@ -57,6 +67,12 @@ export default {
     methods: {
         sendCode () {
             this.start = true
+        },
+        tdClick(params) {
+            console.log(params)
+        },
+        thClick(params) {
+            console.log(params)
         }
     },
     components: { vTable }
