@@ -12,7 +12,26 @@
     </div>
 </template>
 <script>
-import { data } from './tableData.json'
+const data =  [
+				{
+					date: '2016-05-02',
+					name: '王小虎',
+					address: '上海市普陀区金沙江路 1518 弄',
+					gender: 'male'
+				},
+				{
+					date: '2016-05-04',
+					name: '王小虎',
+					address: '上海市普陀区金沙江路 1517 弄',
+					gender: 'male'
+				},
+				{
+					date: '2016-05-01',
+					name: '王小虎',
+					address: '上海市普陀区金沙江路 1519 弄',
+					gender: 'male'
+				}
+			]
 
 import vTable from '@/components/vTable.vue'
 
@@ -29,34 +48,27 @@ export default {
             }],
             start: false,
             seconds: 50,
-            columns: [
-                {
-                    value: 'cTime',
-                    label: '登陆时间'
-                }, {
-                    value: 'nick',
-                    label: '用户名'
-                }, {
-                    value: 'userID',
-                    label: '用户ID'
-                },{
-                    value: 'company.name',
-                    label: '公司',
-                    formatter: function (value) {
-                        return value && value + '123'
-                    },
-                    width: '500'
-                },{
-                    value: 'start',
-                    label: '状态'
-                },{
-                    value: 'operTime',
-                    label: 'operTime'
-                },{
-                    value: 'operNum',
-                    label: 'operTime'
-                }
-            ]
+			columns: [
+				{
+					value: 'gender',
+					label: '性别',
+					formatter: function(value) {
+						return value === 'male' ? '男' : '女'
+					}
+				},
+				{
+					value: 'date',
+					label: '日期'
+				},
+				{
+					value: 'name',
+					label: '姓名'
+				},
+				{
+					value: 'address',
+					label: '地址'
+				}
+			]
         }
     },
     computed: {

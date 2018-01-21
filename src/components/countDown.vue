@@ -39,7 +39,7 @@
                         this.isStart = false;
                         flag = true;
                     }
-                },100)
+                },1000)
             }
         },
         filters: {
