@@ -91,7 +91,7 @@ export default {
 }
 </script>
 ```
-属性：
+#### 属性：
 
 props | type | default |  说明 |
 ------------ | ------------- | ------------ | ----
@@ -100,19 +100,20 @@ columns | Array | - | 控制每一列显示的内容和顺序，数组的每一�
 highLightCurrRow | Boolean| true | 是否高亮当前行
 thClassName | Object| - | 自定义单元格的`className`
 
-事件：
+#### 事件：
+
 `thClick`: 表头被点击时触发，参数见代码
 
 `tdClick`: 单元格被点击时触发，参数见代码
 
 `tableScroll`: 表格滚动时触发，参数见代码
 
-slot：
+####slot：
 可对表头单元格和表身单元格自定义一些内容，
-name | props | 说明 |
------------- | ------------- | ------------ |
-thSlot | col,colIndex | 表头单元格的自定义插槽 | 
-tdSlot | col,colIndex,row,rowIndex | 表身单元格的自定义插槽 |
+name | props | 说明 
+------------ | ------------- | ------------ 
+thSlot | col,colIndex | 表头单元格的自定义插槽 |
+tdSlot | col,colIndex,row,rowIndex | 表身单元格的自定义插槽 
 
 
 
