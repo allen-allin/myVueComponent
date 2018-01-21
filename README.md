@@ -102,15 +102,17 @@ thClassName | Object| - | 自定义单元格的`className`
 
 事件：
 `thClick`: 表头被点击时触发，参数见代码
+
 `tdClick`: 单元格被点击时触发，参数见代码
+
 `tableScroll`: 表格滚动时触发，参数见代码
 
 slot：
 可对表头单元格和表身单元格自定义一些内容，
 name | props | 说明 |
------------- | ------------- | ------------
-thSlot | col,colIndex | 表头单元格的自定义插槽
-tdSlot | col,colIndex,row,rowIndex | 表身单元格的自定义插槽
+------------ | ------------- | ------------ |
+thSlot | col,colIndex | 表头单元格的自定义插槽 | 
+tdSlot | col,colIndex,row,rowIndex | 表身单元格的自定义插槽 |
 
 
 
