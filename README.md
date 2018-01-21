@@ -108,8 +108,12 @@ thClassName | Object| - | 自定义单元格的`className`
 
 `tableScroll`: 表格滚动时触发，参数见代码
 
-####slot：
+
+#### slot：
+
 可对表头单元格和表身单元格自定义一些内容，
+
+
 name | props | 说明 
 ------------ | ------------- | ------------ 
 thSlot | col,colIndex | 表头单元格的自定义插槽 |
